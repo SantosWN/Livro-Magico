@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O Livro Mágico de Leitura</title>
+
+  <!-- PaperCSS para estilo rascunho/papel -->
+  <link rel="stylesheet" href="https://unpkg.com/papercss@1.9.2/dist/paper.min.css" />
+  
+  <!-- CSS Personalizado do Projeto -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Bibliotecas Externas (CDN) -->
+  <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+  <script src="https://unpkg.com/roughjs@latest/bundled/rough.js"></script>
+</head>
+<body>
+
+  <div class="paper container main-container">
+    
+    <!-- FAIXA SUPERIOR: TÍTULO E BOTÕES -->
+    <div class="header-bar">
+      <h2 style="margin:0;" id="main-title">📚 O Livro Mágico</h2>
+      <div class="header-buttons">
+        <button id="btn-home" class="btn-small top-btn btn-secondary" style="display:none;" onclick="reiniciar()">🏠 Início</button>
+        <button id="music-toggle" class="btn-small top-btn" onclick="toggleMusica()">🎵 Música: Off</button>
+      </div>
+    </div>
+
+    <!-- TELA 1: Boas-vindas, Nome e Seleção de História -->
+    <div id="welcome-screen">
+      <p class="text-center">Escolha a história e digite o nome do(a) protagonista!</p>
+      
+      <div class="form-group">
+        <label for="child-name">Nome da Criança:</label>
+        <input class="input-block" type="text" id="child-name" placeholder="Ex: Sophia, Lucas, Gabriel..." />
+      </div>
+
+      <div class="form-group">
+        <label for="story-select">Escolha uma Aventura:</label>
+        <select id="story-select" class="input-block">
+          <option value="0">🌲 Aventura na Floresta Secreta</option>
+          <option value="1">🚀 A Viagem Espacial</option>
+        </select>
+      </div>
+
+      <button class="btn-primary btn-block" onclick="iniciarHistoria()">Começar a Leitura 🚀</button>
+    </div>
+
+    <!-- TELA 2: Leitor de História -->
+    <div id="story-screen" class="card story-card">
+      <div class="card-body">
+        
+        <div class="row flex-edges flex-middle">
+          <h3 class="card-title" id="story-title" style="margin: 0;">Título</h3>
+          <span class="page-indicator" id="page-indicator">Página 1</span>
+        </div>
+
+        <div class="illustration-box">
+          <canvas id="sketch-canvas" width="380" height="150"></canvas>
+        </div>
+
+        <p class="story-text-box" id="story-text"></p>
+
+        <!-- CONTROLES DE NAVEGAÇÃO -->
+        <div class="row flex-edges flex-middle" style="margin-top: 20px;">
+          <button id="btn-prev" class="btn-secondary" onclick="paginaAnterior()">← Anterior</button>
+          <div>
+            <button id="btn-next" class="btn-success" onclick="proximaPagina()">Próxima →</button>
+            <button id="btn-restart" class="btn-warning" style="display:none;" onclick="reiniciar()">Outra História 🔄</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts do Projeto (Executados na ordem correta) -->
+  <script src="js/audio.js"></script>
+  <script src="js/stories.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
