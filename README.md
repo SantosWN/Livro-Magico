@@ -1,51 +1,73 @@
-```
-# 📚 O Livro Mágico das Aventuras
+# 📚 O Livro Mágico de Leitura
 
-&gt; **"Onde a criança não apenas lê a história — ela se torna a grande protagonista!"**
+Aplicação web infantil interativa para leitura de histórias personalizadas.
 
----
-
-## 📖 Sobre o Projeto
-
-**O Livro Mágico das Aventuras** é uma aplicação web interativa desenvolvida para promover a leitura e a alfabetização infantil de forma lúdica [1, 2]. A aplicação coloca a criança no centro da narrativa através da interpolação dinâmica do seu nome nos títulos e capítulos das histórias [3].
-
-Toda a interface foi projetada utilizando a estética *sketch* (desenhado à mão) [3, 4], oferecendo uma experiência visual acolhedora, artesanal e livre de distrações, seguindo boas práticas de usabilidade infantil [1, 2].
+O projeto permite que a criança informe seu nome, escolha uma aventura e acompanhe uma história dividida em páginas com ilustrações no estilo desenho feito à mão.
 
 ---
 
 ## ✨ Funcionalidades
 
-- **Protagonismo Personalizado**: A criança digita seu nome e ele é inserido instantaneamente em tempo de execução ao longo da história [3].
-- **Estética Artesanal (*Sketch Style*)**: Interface estilizada com o framework **PaperCSS**, simulando bordas irregulares e páginas de papel [4, 5].
-- **Ilustrações Dinâmicas**: Desenhos temáticos em estilo rascunho renderizados no Canvas em cada capítulo através da biblioteca **Rough.js** [4, 6].
-- **Destaques Animados**: O nome do(a) protagonista recebe anotações animadas em marca-texto desenhadas à mão via **Rough Notation** [4, 7, 8].
-- **Ambiente Sonoro Lúdico**: Trilha sonora suave em estilo caixinha de música sintetizada nativamente via Web Audio API, com controle de ligar/desligar.
-- **Navegação Intuitiva**: Controles simples com botões de próximo/anterior, seleção de histórias e botão **`🏠 Início`** na barra superior [3].
+- 📖 Leitura de histórias infantis
+- 👦 Personalização com o nome da criança
+- 🌲 História da Floresta Secreta
+- 🚀 História da Viagem Espacial
+- 🎨 Ilustrações utilizando Rough.js
+- ✏️ Efeito de destaque utilizando Rough Notation
+- 🎵 Música utilizando Web Audio API
+- 📄 Navegação entre páginas
+- 🔄 Reiniciar e escolher outra história
+- 📱 Layout responsivo
+- ⌨️ Pressionar Enter para iniciar
+- 🛡️ Proteção básica contra HTML inserido no nome
+- 📱 Compatibilidade com telas menores
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias utilizadas
 
-- **HTML5 &amp; CSS3**: Estrutura semântica e estilização artesanal.
-- **JavaScript (ES6+)**: Lógica da aplicação, navegação de páginas e gerenciamento do estado.
-- **[PaperCSS](https://www.getpapercss.com/)**: Framework CSS informal para visual de papel e rascunho [4, 9].
-- **[Rough.js](https://roughjs.com/)**: Biblioteca gráfica para renderização de elementos no estilo feito à mão [4, 6].
-- **[Rough Notation](https://roughnotation.com/)**: Animações e destaques de texto estilo marca-texto em SVG [4, 7, 8].
-- **Web Audio API**: Sintetização nativa de som para ambiente sonoro relaxante.
+### HTML5
+
+Responsável pela estrutura da aplicação.
+
+### CSS3
+
+Responsável pela personalização visual e responsividade.
+
+### JavaScript
+
+Responsável pela lógica da aplicação.
+
+### PaperCSS
+
+Utilizado para criar o visual de papel/rascunho.
+
+### Rough.js
+
+Utilizado para desenhar as ilustrações no estilo feito à mão.
+
+### Rough Notation
+
+Utilizado para destacar o nome do protagonista.
+
+### Web Audio API
+
+Utilizada para gerar uma pequena música utilizando sons sintetizados pelo navegador.
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura
 
 ```text
 meu-livro-infantil/
-├── index.html        # Estrutura principal da página
-├── README.md         # Documentação do projeto
+│
+├── index.html
+├── README.md
+│
 ├── css/
-│   └── style.css     # Estilos personalizados da aplicação
+│   └── style.css
+│
 └── js/
-    ├── audio.js      # Sintetizador e controle de áudio de fundo
-    ├── stories.js    # Catálogo de histórias e ilustrações Rough.js
-    └── main.js       # Lógica de navegação e interpolação de nomes
-
-```
+    ├── audio.js
+    ├── stories.js
+    └── main.js
