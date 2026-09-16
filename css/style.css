@@ -351,3 +351,108 @@ body {
     width: 100%;
   }
 }
+
+/* ==========================================
+   RODAPÉ DO PROJETO
+========================================== */
+
+.project-footer {
+  width: 95%;
+  max-width: 900px;
+
+  margin: 20px auto 30px;
+
+  padding: 25px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #263238,
+      #37474f
+    );
+
+  color: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15);
+
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+}
+
+.footer-icon {
+  font-size: 45px;
+}
+
+.footer-info {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.footer-info strong {
+  color: #fff176;
+}
+
+.footer-info a {
+  color: #81d4fa;
+
+  font-weight: bold;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.footer-info a:hover {
+  color: #ffffff;
+
+  text-decoration: underline;
+}
+
+
+/* ==========================================
+   RODAPÉ RESPONSIVO
+========================================== */
+
+@media (max-width: 600px) {
+
+  .project-footer {
+    width: 96%;
+
+    padding: 20px 15px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .footer-icon {
+    font-size: 38px;
+  }
+
+  .footer-info {
+    font-size: 13px;
+  }
+}
